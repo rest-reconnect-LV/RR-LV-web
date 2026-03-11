@@ -8,10 +8,16 @@
 
 body {
   font-family: "Nunito Sans", "Segoe UI", sans-serif;
-  background-color: #fff8f2; /* warm cream */
   color: #3a2e2e;
+  text-align: center;
   line-height: 1.8;
   padding: 2rem;
+  background: #f2fffb;
+  background: radial-gradient(circle, rgba(242, 255, 251, 1) 0%, rgba(174, 232, 222, 1) 51%, rgba(123, 181, 225, 1) 85%, rgba(61, 116, 212, 1) 100%); 
+}
+
+.left-text {
+  text-align: left;
 }
 
 main {
@@ -23,20 +29,7 @@ main {
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
 
-/* --- Headings --- */
-h1, h2, h3 {
-  font-family: "Quicksand", sans-serif;
-  color: #8b4513; /* soft brown */
-  margin-bottom: 0.75rem;
-}
-
-h1 {
-  font-size: 2.3rem;
-  color: #c75b39; /* terracotta */
-  border-bottom: 3px solid #f3c969; /* sun gold */
-  padding-bottom: 0.3rem;
-  margin-bottom: 1.2rem;
-}
+/* --- DELETE --- */
 
 h2 {
   font-size: 1.6rem;
@@ -75,34 +68,59 @@ ul li {
 
 /* --- Highlighted sections --- */
 .section {
-  background-color: #fff3d4; /* pale gold tint */
-  border-left: 5px solid #f3c969;
   padding: 1.2rem 1.5rem;
-  border-radius: 6px;
   margin: 1.5rem 0;
+  border: 2px solid #f3c969;
+  border-left: 12px solid #f3c969;
 }
 
-/* --- Footer / small text --- */
-footer, .small {
-  font-size: 0.9rem;
-  color: #665;
-  text-align: center;
-  margin-top: 2rem;
+/* --- Footer */
+
+.site-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:2rem;
 }
 
-/* --- Optional buttons --- */
-button, .btn {
-  background-color: #f3c969;
-  color: #3a2e2e;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.2s ease;
+.footer-btn{
+  width:120px;
+  height:36px;
+  line-height:36px;
+  font-size:16px;
 }
-button:hover, .btn:hover {
-  background-color: #ffd877;
+
+.footer-home img{
+  width:36px;
+  height:36px;
+}
+/* --- FONTS --- */
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("/fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("/fonts/Lexend-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+h1 {
+  font-size:2.3rem;
+  color:#c75b39;
+  border-bottom:3px solid #f3c969;
+  padding-bottom:0.3rem;
+  margin-bottom:1.2rem;
+
+  font-family:"Atkinson Hyperlegible Next",sans-serif;
+  font-weight:800;
+}
+
+h2, h3 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
 }
 
 /* --- Responsive --- */
@@ -110,14 +128,6 @@ button:hover, .btn:hover {
   body { padding: 1rem; }
   main { padding: 1.5rem; }
   h1 { font-size: 1.9rem; }
-}
-
-.section {
-  background-color: #fff3d4;
-  border-left: 5px solid #f3c969;
-  padding: 1.2rem 1.5rem;
-  border-radius: 6px;
-  margin: 1.5rem 0;
 }
 
 .site-header {
@@ -130,16 +140,11 @@ button:hover, .btn:hover {
 }
 
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:1.25rem;
 }
 
 .nav-dropdown {
@@ -196,4 +201,66 @@ button:hover, .btn:hover {
 .organizer-row img {
   width: 250px;
   height: auto;
+}
+
+/* Button CSS */
+ .button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+
+    font-size: 18px;
+    font-family: "Nunito Sans","Segoe UI",sans-serif;
+
+    text-decoration: none;
+    color: black;
+
+    background: #ffedbf;
+    border: 3px solid #f3c969;
+    border-radius: 15px;
+
+    letter-spacing: 2px;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    font-weight: bold;
+
+    transition: border-color 0.4s, color 0.4s;
+}
+
+/* transition layer */
+
+.button::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#f3c969;
+
+    z-index:-1;
+    opacity:0;
+
+    transform:scale3d(0.7,1,1);
+
+    transition: transform 0.4s, opacity 0.4s;
+    transition-timing-function:cubic-bezier(0.2,1,0.3,1);
+}
+
+/* hover state */
+
+.button:hover{
+    color:#3a2e2e;
+    border-color:#f3c969;
+}
+
+.button:hover::before{
+    opacity:1;
+    transform:translate3d(0,0,0);
 }
