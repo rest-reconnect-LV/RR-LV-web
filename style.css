@@ -1,8 +1,4 @@
-/* style.css — Rest & Reconnect (Warm theme) */
-
-* {
-  box-sizing: border-box;
-}
+/* style.css — Rest & Reconnect */
 
 body {
   font-family: "Nunito Sans", "Segoe UI", sans-serif;
@@ -147,7 +143,7 @@ ul li {
   gap:18px;
   margin-top:30px;
   padding-top:18px;
-  border-top:2px solid rgba(255,255,255,0.25);
+  border-top:7px solid white;
 }
 
 /* svg icons */
@@ -237,8 +233,8 @@ h2, h3 {
 }
 
 .site-fav{
-  max-width: fit-content;
-  max-height: fit-content;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .site-nav{
