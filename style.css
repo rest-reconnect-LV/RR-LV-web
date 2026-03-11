@@ -18,7 +18,7 @@ main{
   max-width:850px;
   margin:2rem auto;
   background:#ffffff;
-
+   margin-left:260px;
   border-radius:12px;
   padding:2.5rem;
 
@@ -276,7 +276,7 @@ h2, h3 {
   }
 
   main{
-     margin-left:240px;
+    margin-left:210px;
   }
 
 }
@@ -306,7 +306,14 @@ h2, h3 {
     margin-left:0;
     margin-top:20px;
   }
+.organizer-row{
+  flex-direction:column;
+  align-items:center;
+}
 
+.organizer-row.reverse{
+  flex-direction:column;
+}
 }
 @media (max-width:480px){
 
