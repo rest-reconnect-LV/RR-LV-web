@@ -26,6 +26,7 @@ main {
   padding: 2.5rem;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
   filter: drop-shadow(0 0 1rem #07114b);
+  margin-left:240px;
 }
 
 .section {
@@ -82,24 +83,75 @@ ul li {
 }
 /* --- Footer */
 
+/* --- Footer --- */
+
 .site-footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
   margin-top:2rem;
+  background:#1E4FA1;
+  color:white;
+  padding:40px 30px;
+  border-radius:8px;
 }
 
-.footer-btn{
-  width:120px;
-  height:36px;
-  line-height:36px;
-  font-size:16px;
+/* grid layout */
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  text-align:left;
 }
 
-.footer-home img{
-  width:6rem;
-  height:6rem;
+/* section titles */
+
+.footer-title{
+  color:#f3c969;
+  font-family:"Atkinson Hyperlegible Next", sans-serif;
+  font-weight:800;
+  font-size:1.1rem;
+  margin-bottom:10px;
 }
+
+/* footer links */
+
+.footer-links a{
+  display:block;
+  color:#dce6f2;
+  text-decoration:none;
+  margin:8px 0;
+  font-family:"Lexend", sans-serif;
+}
+
+.footer-links a:hover{
+  color:#f3c969;
+}
+
+/* social icon row */
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  margin-top:30px;
+  padding-top:18px;
+  border-top:2px solid rgba(255,255,255,0.25);
+}
+
+/* svg icons */
+
+.footer-social img{
+  width:28px;
+  height:28px;
+  display:block;
+  opacity:0.9;
+  filter:brightness(0) invert(1);
+}
+
+.footer-social img:hover{
+  opacity:1;
+}
+
 /* --- FONTS --- */
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
@@ -135,26 +187,73 @@ h2, h3 {
   main { padding: 1.5rem; }
   h1 { font-size: 1.9rem; }
 }
+@media (max-width:700px){
 
-.site-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
+  .site-header{
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+
+  .site-nav{
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  main{
+    margin-left:0;
+  }
+
 }
+/* --- SIDEBAR HEADER --- */
 
-.site-nav {
+.site-header{
+  position:fixed;
+  left:0;
+  top:0;
+
+  width:220px;
+  height:100vh;
+
+  background:#1E4FA1;
+
+  padding:30px 20px;
+
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  flex-direction:column;
   align-items:center;
-  gap:1.25rem;
 }
 
-.nav-dropdown {
-  position: relative;
+.site-brand h1{
+  color:white;
+  font-family:"Atkinson Hyperlegible Next",sans-serif;
+  font-size:1.6rem;
+  border-bottom:3px solid #f3c969;
+  padding-bottom:8px;
+  margin-bottom:25px;
+}
+
+.site-nav{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  width:100%;
+}
+
+.site-nav a{
+  color:white;
+  text-decoration:none;
+  padding:10px 14px;
+  font-family:"Lexend",sans-serif;
+
+  border-radius:8px;
+
+  transition:background .2s;
+}
+
+.site-nav a:hover{
+  background:#1A2E45;
 }
 
 .dropdown-menu {
