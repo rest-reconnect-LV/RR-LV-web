@@ -276,7 +276,7 @@ h2, h3 {
   }
 
   main{
-    margin-left:200px;
+     margin-left:240px;
   }
 
 }
@@ -286,14 +286,20 @@ h2, h3 {
     position:relative;
     width:100%;
     height:auto;
-    flex-direction:row;
-    justify-content:center;
+    flex-direction:column;
+    align-items:center;
   }
 
   .site-nav{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:center;
+    gap:10px;
+  }
+
+  .site-fav{
+    max-width:90px;
+    margin-bottom:10px;
   }
 
   main{
@@ -309,11 +315,16 @@ h2, h3 {
   }
 
   main{
-    padding:1.5rem;
+    padding:1.2rem;
   }
 
   h1{
     font-size:1.8rem;
+  }
+
+  .site-nav a{
+    padding:6px 8px;
+    font-size:0.9rem;
   }
 
 }
