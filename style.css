@@ -241,13 +241,13 @@ opacity:.75;
 /* --- FONTS --- */
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
-  src: url("/fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2");
+  src: url("AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "Lexend";
-  src: url("/fonts/Lexend-SemiBold.woff2") format("woff2");
+  src: url("Lexend-SemiBold.woff2") format("woff2");
   font-weight: 600;
 }
 
